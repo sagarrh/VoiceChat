@@ -22,7 +22,7 @@ yarn-error.log
 .vscode/
 .idea/
 *.iml
-.package.json
+
 
 
 # Logs
