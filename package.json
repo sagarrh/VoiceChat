@@ -2,7 +2,7 @@
   "name": "sagarharsora",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/sagarrh/VoiceAgent",
+  "homepage": "https://github.com/sagarrh/VoiceChat",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
