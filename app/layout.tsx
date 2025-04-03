@@ -4,7 +4,7 @@ import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 import { Nav } from "@/components/Nav";
 import { cn } from "@/utils";
-import { SplashCursor } from "@/components/ui/splash-cursor";
+import SplashCursor from "@/components/SplashCursor/SplashCursor";
 
 export const metadata: Metadata = {
   title: "Emph-Voice",
