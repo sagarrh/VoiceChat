@@ -4,6 +4,7 @@ import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 import { Nav } from "@/components/Nav";
 import { cn } from "@/utils";
+import { SplashCursor } from "@/components/ui/splash-cursor";
 
 export const metadata: Metadata = {
   title: "Emph-Voice",
@@ -24,6 +25,8 @@ export default function RootLayout({
           "flex flex-col min-h-screen"
         )}
       >
+        
+        <SplashCursor />
         <Nav />
         {children}
       </body>
