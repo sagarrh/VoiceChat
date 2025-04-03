@@ -5,17 +5,29 @@ const Chat = dynamic(() => import("@/components/Chat"), {
   ssr: false,
 });
 
-export default async function homepage() {
-  const accessToken = await getAccessToken();
+export default async function HomePage() {
+  try {
+    const accessToken = await getAccessToken();
 
-  if (!accessToken) {
-    throw new Error();
+    if (!accessToken) {
+      return (
+        <div className="grow flex flex-col items-center justify-center">
+          <p>Unable to initialize chat. Please try again later.</p>
+        </div>
+      );
+    }
+
+    return (
+      <div className="grow flex flex-col">
+        <Chat accessToken={accessToken} />
+      </div>
+    );
+  } catch (error) {
+    return (
+      <div className="grow flex flex-col items-center justify-center">
+        <p>An error occurred while initializing the chat.</p>
+      </div>
+    );
   }
-
-  return (
-    <div className={"grow flex flex-col"}>
-      <Chat accessToken={accessToken} />
-    </div>
-  );
 }
-// This code is a Next.js component that dynamically imports a Chat component and renders it.
+  
